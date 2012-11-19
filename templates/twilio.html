@@ -1,0 +1,35 @@
+{% extends "layout/main.html" %}
+
+
+{% block body %}
+<h2> Let a random program do the thinking! </h2>
+<form method="POST">
+	
+	<br>
+	<label for="telephone">Enter a phone number</label>
+	<input type="tel" id="telephone" name="telephone"><br>
+
+	<label for="sms_text" placeholder="Your name goes here">Enter your name</label>
+	<input type="text" id="person_name" name="person_name"><br>
+	<form class="form-inline">
+	<input type="submit" class="btn butn-block btn-primary" id="wear" name ="action" value="What should I wear today?" onsubmit="click(this.id)">
+	<input type="submit" class="btn butn-block btn-primary" id="eat" name ="action" value="What should I eat for lunch?" onsubmit="click(this.id)">
+	<input type="submit" class="btn butn-block btn-primary" id="happy" name="action" value="What makes me happy?" onsubmit="click(this.id)">
+	<script type="text/javascript">
+	function click(clicked_id){
+	var clicked= (clicked_id);
+	return clicked;
+
+	}
+
+</script>
+</form>
+</form>
+
+<hr>
+
+{% endblock %}
+
+
+{% block styles %}{% endblock %}
+{% block scripts %}{% endblock %}
