@@ -23,21 +23,24 @@
         <![endif]-->
         <div class="container">
 
-            <h1 class="pageheader"> Totally random ideas to simplify your life
+            <h1 class="pageheader"> 
                 <a href="/">Totally random ideas to simplify your life</a>
             </h1>
 
             <hr>
 
-            <h4> Your number needs to be registered on Twilio to work </h4>
-            
             {% block body %}{% endblock %}
 
 
             <hr/>
 
+            <div class="footer">
+                <h4> Your number needs to be registered on Twilio to work </h4>
+              </div> 
+
         </div> <!-- /container -->
 
+         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ url_for('static', filename='js/jquery-1.8.1.min.js') }}"><\/script>')</script>
         <script src="{{ url_for('static', filename='js/vendor/bootstrap.min.js') }}"></script>

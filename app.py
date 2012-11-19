@@ -32,11 +32,11 @@ def twilio():
 			text = "Having all the answers with minimal work"
 		
 
-		prepare telephone number. regex, only numbers
+		#prepare telephone number. regex, only numbers
 		telephone_num = re.sub("\D", "", telephone)
-		if len(telephone_num) < 10:
+		if len(telephone_num) !=10:
 			return "Make sure you entered the right number"
-		elif len(telephone_num) = 10:
+		else:
 			to_number = "+1" + str(telephone_num) #US country only now
 
 
