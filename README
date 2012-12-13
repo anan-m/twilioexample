@@ -1,0 +1,27 @@
+Twilio-web-app
+A simple way to connect to the Twilio api and send texts
+
+Getting Twilio Account
+
+Register https://www.twilio.com/try-twilio. Verify phone number with access code. Pick a phone number. Poke around all their API endpoints, make and receive calls, make and receive SMS. When you are registered locate your your Account SID and Auth Token here,https://www.twilio.com/user/account and add them to your .env file
+
+.env
+
+TWILIO_ACCOUNT_SID=xxxxxxxxxxxxxx 
+TWILIO_AUTH_TOKEN=xxxxxxxxx 
+TWILIO_PHONE_NUMBER=+XXXXXXXXX 
+Now let's add the Twilio account variables to Heroku.
+
+In your code directory in Terminal run,
+
+heroku config:add TWILIO_ACCOUNT_SID=xxxxxxxxxxxxxx 
+heroku config:add TWILIO_AUTH_TOKEN=xxxxxxxxxxxxxx 
+heroku config:add TWILIO_PHONE_NUMBER=+XXXXXXXXX
+
+Getting random output from python lists
+
+foo=['a', 'b', 'c']
+
+import choice from random
+
+print choice(foo)
