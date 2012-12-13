@@ -2,6 +2,7 @@
 import os, datetime
 import re
 from unidecode import unidecode
+import random
 
 from flask import Flask, request, render_template, redirect, abort, jsonify
 import requests
@@ -25,11 +26,20 @@ def twilio():
 		telephone = request.form.get('telephone')
 		person_name = request.form.get('person_name')
 		if request.form["action"] == "What should I wear today?":
-			text = "It's November. Whatever you do, be sure to put on a jacket"
+			foo=['Rain boots', 'Lots of make up', 'Boat shoes and a toupe']
+			from random import choice
+			text= choice(foo)
+			#text = "It's November. Whatever you do, be sure to put on a jacket"
 		elif request.form["action"] == "What should I eat for lunch?":
-			text = "You will OD on meat later this week, so get some veggies"
+			foo=['Tofu', 'Check your fridge, do not ask me', 'Call your mom']
+			from random import choice
+			text= choice(foo)
+			#text = "You will OD on meat later this week, so get some veggies"
 		elif request.form["action"] == "What makes me happy?":
-			text = "Having all the answers with minimal work"
+			foo=['British Royalty', 'Bunnies and Cats on Buzzfeed', 'Movies based on movies based on books']
+			from random import choice
+			text= choice(foo)
+			#text = "Having all the answers with minimal work"
 		
 
 		#prepare telephone number. regex, only numbers
